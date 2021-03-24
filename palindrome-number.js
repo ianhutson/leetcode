@@ -29,8 +29,8 @@
 // -231 <= x <= 231 - 1
 
 var isPalindrome = function(x) {
-    var xToArr = (""+x).split("");
-    if (xToArr === xToArr.reverse()) {
-        return true
-    }
+    var reverse = x.toString().split("").reverse().join("")
+    if (x < 0) {return false}
+    else if (x.toString() === reverse) {return true}
+    else return false
 };

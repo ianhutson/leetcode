@@ -33,7 +33,6 @@ var searchInsert = function(nums, target) {
     let copy = nums.slice()
     copy.push(target)
     let sorted = copy.sort(function(a,b) { return a - b; })
-    console.log(sorted.indexOf(target))
     if (nums.includes(target)) return nums.indexOf(target)
     else return sorted.indexOf(target)
 };

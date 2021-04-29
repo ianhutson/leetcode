@@ -19,5 +19,10 @@
 // Output: [4,2,0,7,4]
 
 var decode = function(encoded, first) {
-    
+    arr = [first]
+    for (let i=0; i < encoded.length ; i++){
+        let next = encoded[i] ^ arr[i]
+        arr.push(next)
+    }
+    return arr
 };

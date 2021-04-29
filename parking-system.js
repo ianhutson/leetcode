@@ -20,3 +20,11 @@
 // parkingSystem.addCar(2); // return true because there is 1 available slot for a medium car
 // parkingSystem.addCar(3); // return false because there is no available slot for a small car
 // parkingSystem.addCar(1); // return false because there is no available slot for a big car. It is already occupied.
+
+var ParkingSystem = function(...spaces) {
+    this.spaces = spaces;
+};
+
+ParkingSystem.prototype.addCar = function(car) {
+    return this.spaces[car-1] ? this.spaces[car-1]-- && true : false;
+  };

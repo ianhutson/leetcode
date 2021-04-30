@@ -19,3 +19,20 @@
 // Input: allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
 // Output: 4
 // Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
+
+var countConsistentStrings = function(allowed, words) {
+    let count=0, matched
+    for(let i in words){
+        let n=0
+        matched=true
+         while(n<words[i].length){
+             if(!allowed.includes(words[i][n])){
+                 matched=false
+             }
+            n++
+         }
+        matched && count++
+       
+    }
+    return count
+};

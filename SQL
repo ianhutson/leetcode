@@ -316,3 +316,4 @@ Result table:
 
 John, Daiana, Steve and Jasmine are enrolled in departments 14, 33, 74 and 77 respectively. department 14, 33, 74 and 77 doesn't exist in the Departments table.
 
+SELECT id, name FROM Students WHERE department_id not in (SELECT id FROM Departments)

@@ -57,7 +57,7 @@ var romanToInt = function(s) {
     let current;
     let previous = 0;
     for (const char of [...s].reverse()) {
-      current = romanNumbers[char];
+      current = romNum[char];
       if (current >= previous) {
         result += current;
       } else {
@@ -71,4 +71,3 @@ var romanToInt = function(s) {
 
     
 
-};

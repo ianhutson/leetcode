@@ -23,5 +23,6 @@
  
 
 def plus_one(digits)
-    
+    arr = digits.join("").to_i + 1
+    arr.to_s.split("").map(&:to_i)
 end

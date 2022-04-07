@@ -16,7 +16,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
         let half = Math.round(combinedArr.length / 2) 
         console.log(half)
         console.log(combinedArr[half-1])
-        return combinedArr[half]
+        return combinedArr[half-1]
     }
 };
 

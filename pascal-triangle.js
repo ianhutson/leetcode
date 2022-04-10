@@ -4,6 +4,7 @@ var generate = function(numRows) {
     if (numRows == 1) output = [[1]];
     for(let i=1; numRows.length>=i;i++){
         let result = [];
+        
         output.push(result);
     }
 };

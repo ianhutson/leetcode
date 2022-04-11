@@ -1,9 +1,5 @@
 var removeDuplicates = function(nums) {
-    let i = 1;
-    for (let j = 1; j < nums.length; ++j)
-        if (nums[j] !== nums[j - 1]) 
-            nums[i++] = nums[j];
-    return i;
+    nums.forEach((element, index) => {
+    nums.splice(index, nums.lastIndexOf(element) - index)
+    });
 };
-
-removeDuplicates([1,1,2])

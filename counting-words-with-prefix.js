@@ -1,17 +1,9 @@
 var prefixCount = function(words, pref) {
     let count = 0;
-    for(let i = 0; i < pref.length; i++){
-        let contains = false;
-        for(let j = 0; j < words.length; j++){
-            if(words[j][i] !== pref[i]){
-                j++
-            } else contains = true
-        }
-        if (contains = true){
-            count++
-        }
+    for(let word of words){
+        if(word.indexOf(pref) == 0) count++;
     }
-    console.log(count)
+    return count;
 };
 
 prefixCount(["leetcode","win","loops","success"], "code")
